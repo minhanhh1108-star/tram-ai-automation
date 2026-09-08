@@ -14,3 +14,9 @@
 - Nội dung narration (SCRIPT.md) không đổi — không cần chạy lại Gate B.
 - Gate D chạy lại toàn bộ: PASS — thời lượng 51.87s; không khoảng lặng bất thường; Gemini phiên âm ngược khớp đủ 7 dòng, đúng thứ tự; soát hình ảnh 4 khung (đầu video mở trực tiếp vào frame Context, 25%/60%/90%) đều sạch, ngày sản xuất hiển thị rõ ràng cạnh masthead Trạm AI.
 - reviewer: automated-routine (phiên tương tác)
+
+## Revision 2 — 2026-09-08T15:05:00Z (theo yêu cầu người dùng, tương tác trực tiếp)
+
+- Thay đổi thuần thị giác: chuyển pill ngày sản xuất "08/09/2026" từ hàng cùng masthead Trạm AI xuống cạnh badge "Nguồn: VnExpress", đổi sang cùng kiểu dáng/màu (pill viền cyan) với badge nguồn thay vì chữ mờ đơn giản trước đó.
+- Không đổi narration, thời lượng, cấu trúc frame hay audio — chỉ CSS/markup của frame Context. Không cần chạy lại Gate B/D đầy đủ; đã soát lại bằng mắt khung hình mở đầu (t=2.6s) xác nhận 2 badge thẳng hàng, cùng kiểu, dễ đọc, không tràn/chồng.
+- reviewer: automated-routine (phiên tương tác)
