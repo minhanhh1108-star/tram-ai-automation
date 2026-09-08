@@ -43,6 +43,36 @@ Apps Script (trigger postScheduledVideo, 7h/12h/19h) tự đăng lên Facebook/Y
 - Google Cloud project `tram-ai-youtube-automation` — OAuth YouTube (đã publish production, không
   còn giới hạn refresh token 7 ngày).
 
+## Environment (claude.ai/code) — network access
+
+Routine chạy trong sandbox Linux, mọi request HTTPS đi qua 1 egress proxy chỉ cho phép domain nằm
+trong allowlist của environment (`env_01TMbLEyRM3acJv6GcxNADPB`, tên "Default"). Environment này
+**bắt buộc phải đặt Network access = "Custom"** (không dùng mặc định "Trusted" — mức đó KHÔNG bao
+gồm `script.google.com` nên toàn bộ pipeline sẽ dừng ngay ở Bước 1).
+
+Allowlist tối thiểu cần có (Custom):
+- `script.google.com`, `script.googleusercontent.com` — endpoint Apps Script "Tram AI News Fetch"
+  (lấy tin, đánh dấu used, proxy lồng tiếng). Đây là domain bắt buộc nhất — routine hoàn toàn phụ
+  thuộc endpoint này cho cả Bước 1 và Bước 4.
+- `github.com`, `raw.githubusercontent.com`, `objects.githubusercontent.com` — git push GATE C.
+- `registry.npmjs.org` và các registry gói khác — thường đã được proxy bypass thẳng (không cần
+  thêm), dùng cho `npx hyperframes`.
+
+Không cần thêm domain CDN ảnh báo (`vnecdn.net`, `icdn.dantri.com.vn`...) hay `api.elevenlabs.io` —
+Trạm AI không gọi thẳng các domain đó (khác kiến trúc của kênh "Bot Bán Hàng · Kinh Doanh", repo
+`github.com/quangnv-cloud/bot-ban-hang-kinh-doanh`, xem `PIPELINE-PLAYBOOK.md` của họ để tham khảo
+kiến trúc gốc — cùng ý tưởng "đẩy mọi thứ nhạy cảm ra Apps Script" nhưng họ gọi ElevenLabs/Gemini
+trực tiếp nên cần allowlist thêm domain đó, Trạm AI thì không).
+
+### Bảng lỗi đã gặp
+
+| Triệu chứng | Nguyên nhân | Cách xử lý |
+|---|---|---|
+| Routine dừng ngay Bước 1: `curl script.google.com` → `403`/`CONNECT tunnel failed` | Environment network access đang ở mức "Trusted" (mặc định), không có `script.google.com` trong allowlist | Đổi Network access sang "Custom", thêm `script.google.com` + `script.googleusercontent.com` (xem mục trên) |
+| `apt-get install ffmpeg` báo `404 Not Found` với vài gói phụ (`libva*`, `mesa-*-drivers`, `libssh-gcrypt-4`...) | Package index apt trong container bị cũ so với mirror, không liên quan network policy | Chạy `apt-get update` trước, sau đó `apt-get install -y ffmpeg` |
+| Tải ảnh minh hoạ (`imageUrl`) trực tiếp từ CDN báo bị chặn egress | CDN báo (subdomain khác nhau tuỳ báo) không nằm trong allowlist và không ổn định để đuổi theo | Nếu Apps Script hỗ trợ route kiểu `?image=<id>` (tải hộ từ phía Google, trả base64) thì dùng route đó thay vì curl thẳng CDN — xem cách kênh "Bot Bán Hàng" đã làm |
+| `git push` vào repo này bị từ chối dù repo public | Repo public chỉ cấp quyền đọc; quyền ghi cần cài Claude GitHub App lên account/org chứa repo rồi reconnect GitHub connector | Cài GitHub App (`github.com/apps/claude/installations/select_target`) lên account sở hữu `tram-ai-automation`, reconnect ở claude.ai Settings → Connectors |
+
 ## Cập nhật chính sách
 
 Sửa `automation/policy/COMPLIANCE-GATE.md` (hoặc 2 file gốc) → commit → lần chạy routine tiếp theo
