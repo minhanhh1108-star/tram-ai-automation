@@ -35,6 +35,46 @@ Apps Script (trigger postScheduledVideo, 7h/12h/19h) tự đăng lên Facebook/Y
   `COMPLIANCE-GATE.md` (checklist rút gọn, routine đọc trực tiếp file này).
 - `videos/<slug>/COMPLIANCE.md` — nhật ký kiểm duyệt của từng video đã qua Gate B, ghi ở Gate C.
 
+## Định dạng caption/description đăng bài (Bước 10)
+
+Chốt 2026-09-14, áp dụng cho MỌI video từ đây trở đi (thay thế cách viết caption tự do trước đó).
+Format lấy nguyên khung trình bày (không lấy nội dung) từ kênh "Bot Bán Hàng · Kinh Doanh" — thuần
+thông tin, KHÔNG có câu hỏi/CTA mời bình luận trong caption (khác với video: frame CTA trong video
+vẫn giữ nguyên 2 thẻ đối lập + nút "Bình luận ngay" như mô tả ở BƯỚC 6, chỉ phần caption text đăng
+kèm là đổi).
+
+Cấu trúc bắt buộc, đúng thứ tự, mỗi khối cách nhau 1 dòng trống:
+
+```
+<1 emoji phù hợp chủ đề> TIÊU ĐỀ IN HOA NGẮN GỌN — NÊU THẲNG SỰ KIỆN/SỐ LIỆU CHÍNH
+
+<Đoạn mở 1-2 câu: ai, làm gì, khi nào — lấy đúng nội dung dòng Context (dòng 2 SCRIPT.md)>
+
+<emoji bullet 1> <Số liệu/so sánh nổi bật nhất — lấy từ Nội dung chính 1 (dòng 3 SCRIPT.md)>
+
+<emoji bullet 2> <Chi tiết bổ sung/hệ quả — lấy từ Nội dung chính 2 + So what (dòng 4-5 SCRIPT.md), tóm gọn>
+
+📌 Nguồn: <tên báo>, <ngày>
+
+#TrạmAI #AI #<3-5 hashtag chủ đề cụ thể theo tin>
+```
+
+Quy tắc:
+- Tiêu đề IN HOA không quá 1 dòng dài, có số liệu/thực thể chính nếu bài có (vd "%", mốc thời gian,
+  tên công ty/người) — không bắt buộc phải có số nếu bản thân tin không có số liệu nổi bật.
+- 2 bullet nội dung dùng emoji phù hợp ngữ cảnh (không cố định 📊/💰 như mẫu gốc vì Trạm AI đưa tin
+  AI/công nghệ, không phải tài chính — chọn tự do trong nhóm 🧠🤖⚙️📊💡🔍⚠️🌐📈 tuỳ nội dung), nhưng
+  PHẢI đúng 2 bullet, không thêm/bớt.
+- KHÔNG thêm câu hỏi/lời mời bình luận nào trong caption — đây là điểm khác biệt cố ý so với format
+  cũ. Tương tác đã có sẵn ở frame CTA trong video.
+- Toàn bộ số liệu/trích dẫn phải đúng những gì đã qua Gate B (không bịa thêm số liệu mới lúc viết
+  caption).
+- 3-5 hashtag chủ đề + bắt buộc có `#TrạmAI` (không dùng `#BotBanHang` — đó là hashtag kênh khác).
+- Dùng caption này cho cả 4 field: `caption` (Facebook/Instagram/Threads) và `description` (YouTube).
+- `title` (field riêng, dùng làm tên video YouTube + title Facebook) là bản rút gọn SẠCH của tiêu đề
+  — Title Case bình thường, KHÔNG in hoa toàn bộ, KHÔNG emoji (khác với dòng tiêu đề emoji+IN HOA ở
+  đầu caption, vốn chỉ dùng trong phần caption/description).
+
 ## Hạ tầng liên quan (không nằm trong repo này)
 
 - Apps Script "Tram AI News Fetch" — lấy tin, proxy lồng tiếng an toàn (ELEVENLABS_API_KEY trong
