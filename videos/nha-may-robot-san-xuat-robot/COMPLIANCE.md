@@ -1,0 +1,31 @@
+# Compliance — nha-may-robot-san-xuat-robot
+
+- decision: APPROVE
+- risk_level: GREEN
+- gate_a_passed: true
+- gate_b_result: {"decision":"APPROVE","risk_level":"GREEN","violations":[],"claims_to_verify":["Nhà máy UBTECH tại Liễu Châu, Quảng Tây khai trương 12/9/2026, rộng 14.000 m², công suất >10.000 robot/năm, 10 phút/robot — đối chiếu Global Times, IBTimes UK, Interesting Engineering","Xuất xưởng robot hình người toàn cầu nửa đầu 2026 vượt 22.000 đơn vị, Trung Quốc chiếm cả top 5, hơn 140 nhà sản xuất trong nước — đối chiếu WebSearch tổng hợp nhiều nguồn quốc tế","Góc nhìn 'khó tìm việc cho robot' có cơ sở thật, lấy từ tiêu đề bài kenh14.vn tổng hợp cùng sự kiện"],"ai_disclosure_required":false,"reason":"Tin công nghệ/robot thông thường (không hình sự/chính trị/y tế/tài chính cam kết lợi nhuận/deepfake). WebFetch trực tiếp vnexpress.net bị egress-blocked nên dùng WebSearch đối chiếu nhiều nguồn quốc tế độc lập (Global Times, IBTimes UK, Interesting Engineering) — khớp nhau về sự kiện, địa điểm, ngày, số liệu. Không tuyên bố tuyệt đối, không bịa số liệu/quote. Góc tranh luận hai chiều có cơ sở thật (tốc độ sản xuất vs tốc độ tạo việc làm thực sự cho robot) — đúng cấu trúc CTA 2 thẻ đối lập."}
+- gate_d_result: PASS — 8.5a duration 58.9s (trong 45-65s, dưới trần 60s); 8.5b không có khoảng lặng ≥2.5s; 8.5c transcript Gemini khớp đủ 7 dòng SCRIPT.md (model gemini-2.0-flash đã ngừng hỗ trợ, dùng gemini-3.6-flash thay thế, transcript khớp nội dung, chỉ khác biệt STT nhỏ như "14.000 m2" thay vì "mét vuông"); 8.5d QC hình ảnh tại 25%/60%/90% tổng thời lượng + trung điểm từng frame — không chữ chồng, không cắt chữ, không vùng đen bất thường, Brand Anchor luôn hiển thị đúng từ sau frame 1; 8.5e đo pixel vertical-fill (nền #0b1e3d, riêng frame 1 nền ảnh thật ở nửa trên) — F1 bottom=1484px fill=77.3%, F2 bottom=1460px fill=73.5%, F3 bottom=1490px fill=75.1%, F4 bottom=1500px fill=75.6%, F5 bottom=1492px fill=75.2%, F6 bottom=1658px fill=83.9% — cả 6 frame đều đạt bottom trong khoảng 1400-1680px và fill ≥55% (đã phát hiện fail ở F1/F3/F4/F5 trong lần đo đầu, tăng padding-top từng frame rồi đo lại đạt); 8.5g mọi giá trị động (10.000+, 14.000 m², 140+, 22.000+, các thanh bar) đều về đúng giá trị cuối tại cuối mỗi frame, không có giá trị kẹt ở 0; 8.5f loudness -15.0 LUFS / true peak -1.5 dBTP (lệch mục tiêu -14 LUFS khoảng 1 LU, trong ngưỡng chấp nhận, chỉ mang tính khuyến nghị nên không chặn Gate D).
+- claims_verified:
+  - "Nhà máy UBTECH tại Liễu Châu, Quảng Tây khai trương 12/9/2026, rộng 14.000 m², công suất >10.000 robot/năm, 10 phút/robot" — đã đối chiếu WebSearch với Global Times, IBTimes UK, Interesting Engineering (khớp nhau về sự kiện/địa điểm/ngày/số liệu) trước khi vào sản xuất video này.
+  - "Xuất xưởng robot hình người toàn cầu nửa đầu 2026 vượt 22.000 đơn vị, Trung Quốc chiếm cả top 5, hơn 140 nhà sản xuất trong nước" — đã đối chiếu WebSearch tổng hợp nhiều nguồn quốc tế độc lập.
+  - "Góc nhìn 'khó tìm việc cho robot' có cơ sở thật" — lấy từ tiêu đề bài kenh14.vn tổng hợp cùng sự kiện, dùng làm góc tranh luận hai chiều ở frame So-what/CTA, không tuyên bố tuyệt đối.
+- copyright_notes: "ảnh nguồn thật VnExpress (id e50a6c014f6c, lấy qua Apps Script image proxy) — dùng ở frame 1 (nửa trên) và frame 2 (thẻ ảnh nhỏ 480×300), đúng giới hạn tối đa 2 frame; nhạc nền tự sinh bằng Lyria (lyria-recipe.py, prompt ambient tin tức không lời, không giọng hát); SFX 3 hiệu ứng pop/click qua media-use resolve (bundled catalog: sfx_001 click, sfx_002 pop) + 1 biến thể pitch-shift bằng ffmpeg (asetrate) từ sfx_003 cho nút CTA để tạo âm sắc 'confirm' khác biệt."
+- ai_disclosure_required: false
+- checked_at: 2026-09-16T12:45:12Z
+- reviewer: automated-routine
+
+## Nguồn
+
+- VnExpress: https://vnexpress.net/nha-may-robot-san-xuat-robot-di-vao-hoat-dong-5120489.html (id e50a6c014f6c, pubDate 2026-09-15)
+- Đối chiếu quốc tế (WebSearch, không truy cập trực tiếp do egress-blocked tới vnexpress.net): Global Times, IBTimes UK, Interesting Engineering, kenh14.vn.
+
+## Kỹ thuật
+
+- `npm run check` (hyperframes@0.8.41): Lint 0 lỗi / 1 cảnh báo (audio_carve_ungrouped_sources — carve đặt tên trực tiếp 6 clip giọng đọc thay vì 1 group, chỉ là khuyến nghị bảo trì, không chặn build); Runtime 0/0; Layout 0 lỗi/0 cảnh báo/1 info (Ken Burns ảnh frame 1 tràn nhẹ ra ngoài khung ảnh đã bị clip bởi `overflow:hidden`, là chủ đích); Motion 0/0; Contrast 49/49 đạt WCAG AA. `check` PASS.
+- Render cuối: `renders/video.mp4` — 58.9s, 21.1MB, 1080×1920, quality high, video-bitrate 10M (HyperFrames CLI, beginframe capture, software GPU).
+- GSAP CDN (`cdn.jsdelivr.net`) bị egress-blocked trong sandbox → đã cài `gsap@3.14.2` cục bộ (`npm install --no-save`), copy `node_modules/gsap/dist/gsap.min.js` → `assets/vendor/gsap.min.js`, sửa lại thẻ `<script>` trong `index.html` sau mỗi lần `assemble-index.mjs` chạy lại (script `postprocess-index.mjs` tự động hoá việc này, idempotent).
+- BGM: tự sinh bằng Google Lyria realtime (`lyria-recipe.py`, cần cài thêm `google-genai` qua pip vì môi trường thiếu sẵn), prompt "calm ambient Vietnamese news underscore ... instrumental only", negative prompt loại bỏ giọng hát/trống. Mix volume 0.09 (đúng giá trị hiệu chỉnh thương hiệu Trạm AI). Đã chạy `carve.mjs --strength 0.4` để tự động né tần số + tạo automation lách nhạc nền dưới giọng đọc trước khi render.
+- Frame-style-rotation: card-and-bar (index 0, đã ghi vào `videos/frame-style-rotation-state.json` từ trước) áp dụng cho frame 2, 3, 4 (và biến thể pull-quote có thanh cobalt cho frame 5); frame 1 (hero/context) và frame 6 (CTA) giữ cấu trúc cố định theo đúng quy tắc.
+- Brand Anchor: `#brand-anchor` ở cấp root của `index.html` (ngoài mọi sub-composition frame), ẩn mặc định (`opacity:0`), hiện ra đúng lúc frame 1 kết thúc — tween trên timeline root `main` tại t=9.639184s (0.5s fade-in), giữ nguyên tĩnh sau đó suốt phần còn lại video.
+- Gate D 8.5e (đo pixel) phát hiện fail ở 4/6 frame trong lần đo đầu (nội dung dồn quá cao, chưa lấp đủ khung dọc) → đã tăng `padding-top` của từng frame (F1 56→200px, F3 330→520px, F4 320→644px, F5 330→800px) rồi đo lại pixel, đạt cả 6 frame trước khi render bản cuối.
+- Ảnh thật VnExpress: lấy qua Apps Script image proxy (`?image=e50a6c014f6c`, pattern POST/GET→Location→GET thủ công vì endpoint luôn trả 302), `{"ok":true}` — không cần vẽ minh hoạ thay thế.
