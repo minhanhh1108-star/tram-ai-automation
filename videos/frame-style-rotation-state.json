@@ -1,1 +1,59 @@
-{"next_index": 2, "log": [{"index": 0, "style": "card-and-bar", "slug": "ham-phanh-ai-tranh-cai", "date": "2026-09-14"}, {"index": 1, "style": "chip-and-leaderboard", "slug": "ai-vua-chong-tin-tac-vua-la-muc-tieu", "date": "2026-09-15"}, {"index": 2, "style": "split-comparison", "slug": "meta-ai-du-lieu-da-xoa", "date": "2026-09-15"}, {"index": 3, "style": "ring-progress", "slug": "giam-doc-an-ninh-ai-noi-loan", "date": "2026-09-15"}, {"index": 4, "style": "timeline-chronology", "slug": "trung-quoc-bac-bo-canh-bao-ai", "date": "2026-09-16"}, {"index": 5, "style": "icon-grid", "slug": "openai-doc-hoi-thoai-chatgpt", "date": "2026-09-16"}, {"index": 0, "style": "card-and-bar", "slug": "nha-may-robot-san-xuat-robot", "date": "2026-09-16"}, {"index": 1, "style": "chip-and-leaderboard", "slug": "deepseek-hoai-nghi-giam-toc-ai", "date": "2026-09-17"}]}
+{
+  "next_index": 3,
+  "log": [
+    {
+      "index": 0,
+      "style": "card-and-bar",
+      "slug": "ham-phanh-ai-tranh-cai",
+      "date": "2026-09-14"
+    },
+    {
+      "index": 1,
+      "style": "chip-and-leaderboard",
+      "slug": "ai-vua-chong-tin-tac-vua-la-muc-tieu",
+      "date": "2026-09-15"
+    },
+    {
+      "index": 2,
+      "style": "split-comparison",
+      "slug": "meta-ai-du-lieu-da-xoa",
+      "date": "2026-09-15"
+    },
+    {
+      "index": 3,
+      "style": "ring-progress",
+      "slug": "giam-doc-an-ninh-ai-noi-loan",
+      "date": "2026-09-15"
+    },
+    {
+      "index": 4,
+      "style": "timeline-chronology",
+      "slug": "trung-quoc-bac-bo-canh-bao-ai",
+      "date": "2026-09-16"
+    },
+    {
+      "index": 5,
+      "style": "icon-grid",
+      "slug": "openai-doc-hoi-thoai-chatgpt",
+      "date": "2026-09-16"
+    },
+    {
+      "index": 0,
+      "style": "card-and-bar",
+      "slug": "nha-may-robot-san-xuat-robot",
+      "date": "2026-09-16"
+    },
+    {
+      "index": 1,
+      "style": "chip-and-leaderboard",
+      "slug": "deepseek-hoai-nghi-giam-toc-ai",
+      "date": "2026-09-17"
+    },
+    {
+      "index": 2,
+      "style": "split-comparison",
+      "slug": "jensen-huang-nhan-vien-roi-di",
+      "date": "2026-09-17"
+    }
+  ]
+}
