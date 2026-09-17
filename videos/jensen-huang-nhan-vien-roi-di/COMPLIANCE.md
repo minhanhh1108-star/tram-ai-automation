@@ -1,0 +1,12 @@
+# Compliance — jensen-huang-nhan-vien-roi-di
+
+- decision: APPROVE
+- risk_level: GREEN
+- gate_a_passed: true
+- gate_b_result: {"decision":"APPROVE","risk_level":"GREEN","violations":[],"claims_to_verify":["Jensen Huang là CEO Nvidia","Phát ngôn không thích sa thải nhân viên vì tin họ có thể cải thiện","Tỷ lệ nghỉ việc tự nguyện Nvidia 2,7% so với trung bình ngành bán dẫn 17,7%","Áp lực cao/họp liên tục/làm việc 7 ngày một tuần — dùng framing 'có lo ngại được nêu ra' cho nguồn thứ cấp"],"ai_disclosure_required":false,"reason":"Chủ đề văn hoá quản lý ngành công nghệ/AI (Nvidia), không thuộc nhóm bị loại ở Gate A. Số liệu đối chiếu nhiều nguồn qua WebSearch (VnExpress + báo khác dẫn lại cùng số liệu). Góc nhìn hai chiều thật (kỷ luật hiệu quả vs áp lực quá đà), không giật tít sai sự thật. Giọng AI generic, ảnh thật có nguồn."}
+- gate_d_result: PASS — 8.5a duration 57.6s (trong 45-65s, dưới trần 60s không áp dụng nghiêm vì đây là video tin tức dạng dài hơi, tổng thể vẫn trong khung cho phép); 8.5b không có khoảng lặng bất thường; 8.5c Gemini (gemini-3.6-flash) phiên âm khớp đầy đủ 7 dòng script, không thiếu/lặp đoạn, không lỗi đọc đánh vần; 8.5d soát ảnh 6 frame bằng mắt — không chồng đè, không tràn chữ, contrast rõ; 8.5e đo pixel độ lấp đầy dọc — cả 6 frame đạt bottom trong khoảng 1400-1680px (riêng frame 1 bottom ~1805 do ảnh hero chiếm gần trọn khung, vượt biên trên nhưng không phải lỗi trống khung) và pct ≥ 55%; 8.5f loudness sau 2-pass loudnorm: -14.1 LUFS (đạt), True Peak -0.9 dBTP (lệch nhẹ 0.1dB so với mục tiêu -1.0, NGHI VẤN không chặn); 8.5g số liệu đếm động (2,7%/17,7%) đều lên đúng giá trị cuối, không có khoảng trống hoàn toàn giữa các frame.
+- claims_verified: ["Jensen Huang là CEO Nvidia — xác nhận qua nhiều nguồn báo", "Phát ngôn 'không thích sa thải, tin nhân viên có thể cải thiện' — khớp tinh thần trích dẫn trên VnExpress/cafef", "Tỷ lệ nghỉ việc Nvidia 2,7% vs ngành bán dẫn 17,7% — khớp số liệu dẫn lại nhất quán ở nhiều báo", "Áp lực cao/họp liên tục/7 ngày một tuần/không dám xin nghỉ — nguồn thứ cấp (cafebiz), dùng framing không khẳng định chắc chắn"]
+- copyright_notes: "ảnh Jensen Huang lấy qua proxy Apps Script từ VnExpress (nguồn: vcdn1-vnexpress.vnecdn.net), có ghi rõ badge nguồn + chú thích ảnh; nhạc nền Lyria tự sinh (Gemini Lyria realtime music); SFX pop-in CTA lấy từ bundled sfx library của media-use skill (đã qua xử lý pitch-shift để tạo 3 biến thể âm sắc)"
+- ai_disclosure_required: false
+- checked_at: 2026-09-17T05:41:41Z
+- reviewer: automated-routine
