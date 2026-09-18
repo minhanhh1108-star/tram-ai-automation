@@ -1,5 +1,5 @@
 {
-  "next_index": 4,
+  "next_index": 5,
   "log": [
     {
       "index": 0,
@@ -60,6 +60,12 @@
       "style": "ring-progress",
       "slug": "xe-cap-cuu-robot-hinh-nguoi",
       "date": "2026-09-17"
+    },
+    {
+      "index": 4,
+      "style": "timeline-chronology",
+      "slug": "tai-tro-ba-ty-dong-ai",
+      "date": "2026-09-18"
     }
   ]
 }
