@@ -66,6 +66,12 @@
       "style": "timeline-chronology",
       "slug": "tai-tro-ba-ty-dong-ai",
       "date": "2026-09-18"
+    },
+    {
+      "index": 5,
+      "style": "icon-grid",
+      "slug": "can-kiem-chung-ket-qua-ai",
+      "date": "2026-09-18"
     }
   ]
 }
