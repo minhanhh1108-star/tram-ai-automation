@@ -1,5 +1,5 @@
 {
-  "next_index": 8,
+  "next_index": 9,
   "log": [
     {
       "index": 0,
@@ -77,6 +77,12 @@
       "index": 1,
       "style": "chip-and-leaderboard",
       "slug": "ai-claude-tu-xay-phien-ban-ke-nhiem",
+      "date": "2026-09-21"
+    },
+    {
+      "index": 2,
+      "style": "split-comparison",
+      "slug": "robot-hinh-nguoi-cong-nhan",
       "date": "2026-09-21"
     }
   ]
