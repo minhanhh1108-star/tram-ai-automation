@@ -1,5 +1,5 @@
 {
-  "next_index": 9,
+  "next_index": 10,
   "log": [
     {
       "index": 0,
@@ -84,6 +84,12 @@
       "style": "split-comparison",
       "slug": "robot-hinh-nguoi-cong-nhan",
       "date": "2026-09-21"
+    },
+    {
+      "index": 9,
+      "style": "ring-progress",
+      "slug": "jensen-huang-ai-tan-the",
+      "date": "2026-09-22"
     }
   ]
 }
