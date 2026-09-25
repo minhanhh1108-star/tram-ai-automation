@@ -1,5 +1,5 @@
 {
-  "next_index": 12,
+  "next_index": 13,
   "log": [
     {
       "index": 0,
@@ -102,6 +102,12 @@
       "style": "icon-grid",
       "slug": "ky-su-ke-bam-nut",
       "date": "2026-09-24"
+    },
+    {
+      "index": 0,
+      "style": "card-and-bar",
+      "slug": "ai-cong-cu-nha-sang-tao",
+      "date": "2026-09-25"
     }
   ]
 }
