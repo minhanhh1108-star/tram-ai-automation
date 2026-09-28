@@ -1,5 +1,5 @@
 {
-  "next_index": 15,
+  "next_index": 16,
   "log": [
     {
       "index": 0,
@@ -114,6 +114,12 @@
       "style": "split-comparison",
       "slug": "tac-nhan-ai-lo-anh-chatgpt",
       "date": "2026-09-27"
+    },
+    {
+      "index": 3,
+      "style": "ring-progress",
+      "slug": "google-nghi-viec-vi-ai-qua-nhanh",
+      "date": "2026-09-28"
     }
   ]
 }
