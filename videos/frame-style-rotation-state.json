@@ -1,5 +1,5 @@
 {
-  "next_index": 16,
+  "next_index": 17,
   "log": [
     {
       "index": 0,
@@ -120,6 +120,12 @@
       "style": "ring-progress",
       "slug": "google-nghi-viec-vi-ai-qua-nhanh",
       "date": "2026-09-28"
+    },
+    {
+      "index": 16,
+      "style": "timeline-chronology",
+      "slug": "phim-ai-tran-ngap-mang-xa-hoi",
+      "date": "2026-09-29"
     }
   ]
 }
