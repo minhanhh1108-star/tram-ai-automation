@@ -1,5 +1,5 @@
 {
-  "next_index": 17,
+  "next_index": 18,
   "log": [
     {
       "index": 0,
@@ -126,6 +126,12 @@
       "style": "timeline-chronology",
       "slug": "phim-ai-tran-ngap-mang-xa-hoi",
       "date": "2026-09-29"
+    },
+    {
+      "index": 17,
+      "style": "icon-grid",
+      "slug": "anthropic-canh-bao-ai-de-doa-nhan-loai",
+      "date": "2026-09-30"
     }
   ]
 }
