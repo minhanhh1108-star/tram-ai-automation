@@ -1,5 +1,5 @@
 {
-  "next_index": 19,
+  "next_index": 20,
   "log": [
     {
       "index": 0,
@@ -132,6 +132,12 @@
       "style": "icon-grid",
       "slug": "anthropic-canh-bao-ai-de-doa-nhan-loai",
       "date": "2026-09-30"
+    },
+    {
+      "index": 1,
+      "style": "chip-and-leaderboard",
+      "slug": "tro-ly-ai-doc-tin-nhan-rieng-tu",
+      "date": "2026-10-02"
     }
   ]
 }
