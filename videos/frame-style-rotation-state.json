@@ -1,5 +1,5 @@
 {
-  "next_index": 20,
+  "next_index": 21,
   "log": [
     {
       "index": 0,
@@ -138,6 +138,12 @@
       "style": "chip-and-leaderboard",
       "slug": "tro-ly-ai-doc-tin-nhan-rieng-tu",
       "date": "2026-10-02"
+    },
+    {
+      "index": 20,
+      "style": "split-comparison",
+      "slug": "tac-nhan-ai-noi-doi-gian-lan",
+      "date": "2026-10-03"
     }
   ]
 }
