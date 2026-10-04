@@ -1,5 +1,5 @@
 {
-  "next_index": 21,
+  "next_index": 22,
   "log": [
     {
       "index": 0,
@@ -144,6 +144,12 @@
       "style": "split-comparison",
       "slug": "tac-nhan-ai-noi-doi-gian-lan",
       "date": "2026-10-03"
+    },
+    {
+      "index": 21,
+      "style": "ring-progress",
+      "slug": "robot-hinh-nguoi-giai-doan-trinh-dien",
+      "date": "2026-10-04"
     }
   ]
 }
