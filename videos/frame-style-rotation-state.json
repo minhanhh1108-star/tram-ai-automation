@@ -1,5 +1,5 @@
 {
-  "next_index": 23,
+  "next_index": 24,
   "log": [
     {
       "index": 0,
@@ -155,6 +155,12 @@
       "index": 22,
       "style": "timeline-chronology",
       "slug": "google-dung-trao-thuong-loi-vi-rac-ai",
+      "date": "2026-10-05"
+    },
+    {
+      "index": 23,
+      "style": "icon-grid",
+      "slug": "sep-intel-dung-giao-suy-nghi-cho-ai",
       "date": "2026-10-05"
     }
   ]
