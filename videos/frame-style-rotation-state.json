@@ -1,5 +1,5 @@
 {
-  "next_index": 22,
+  "next_index": 23,
   "log": [
     {
       "index": 0,
@@ -150,6 +150,12 @@
       "style": "ring-progress",
       "slug": "robot-hinh-nguoi-giai-doan-trinh-dien",
       "date": "2026-10-04"
+    },
+    {
+      "index": 22,
+      "style": "timeline-chronology",
+      "slug": "google-dung-trao-thuong-loi-vi-rac-ai",
+      "date": "2026-10-05"
     }
   ]
 }
