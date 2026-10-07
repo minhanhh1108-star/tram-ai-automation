@@ -1,5 +1,5 @@
 {
-  "next_index": 25,
+  "next_index": 26,
   "log": [
     {
       "index": 0,
@@ -168,6 +168,12 @@
       "style": "card-and-bar",
       "slug": "sam-altman-chap-nhan-rui-ro-ai",
       "date": "2026-10-06"
+    },
+    {
+      "index": 25,
+      "style": "chip-and-leaderboard",
+      "slug": "tuyen-dung-ai-thay-nguoi-phong-van",
+      "date": "2026-10-07"
     }
   ]
 }
