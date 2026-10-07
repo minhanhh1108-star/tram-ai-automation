@@ -1,0 +1,11 @@
+# Compliance — tuyen-dung-ai-thay-nguoi-phong-van
+- decision: APPROVE
+- risk_level: GREEN
+- gate_a_passed: true
+- gate_b_result: {"decision":"APPROVE","risk_level":"GREEN","violations":[],"claims_to_verify":["Câu chuyện người tìm việc Việt Nam bị phỏng vấn bởi AI — khớp bài Znews gốc","Nghiên cứu Booth School/Đại học Chicago: AI phỏng vấn có tỷ lệ nhận việc cao hơn người thật, ~78% ứng viên chọn AI khi được quyền chọn — khớp kết quả WebSearch (nghiên cứu University of Chicago Booth, 67.000 phỏng vấn, 9.73% vs 8.7%, 78% chọn AI)"],"ai_disclosure_required":false,"reason":"Chủ đề AI/công nghệ/tuyển dụng thông thường, không hình sự/chính trị/y tế/tài chính cam kết lợi nhuận, không nêu tên cá nhân/doanh nghiệp cụ thể bị cáo buộc. Số liệu lấy đúng từ nghiên cứu thật đã verify qua WebSearch, không bịa thêm. Góc nhìn 2 chiều thật sự, không giật tít sai sự thật. Giọng Vbee là AI narrator generic, không cần disclosure."}
+- gate_d_result: PASS — 8.5a thời lượng 54.03s (trong 45-65s, dưới trần 60s); 8.5b không phát hiện khoảng lặng >1.2s; 8.5c Gemini phiên âm ngược khớp đủ 7 dòng SCRIPT.md (sai khác nhỏ TTS→STT chấp nhận được); 8.5d soát hình bằng mắt tại 25%/60%/90% + điểm giữa các frame chip-and-leaderboard — không chữ tràn/cắt/chồng, contrast đủ, masthead không bị che; 8.5e đo pixel độ lấp đầy khung dọc — cả 6 frame đạt bottom trong [1400,1680]px và fill 72.9%-80.5% (>=55%); 8.5f chuẩn hoá loudness qua master_audio.py — ok:true (I: -21.4 → -14.17 LUFS, TP: -1.92 → -1.25 dBTP); 8.5g giá trị đếm động (9.73%, 8.70%, 78% ở frame 2) đã lên số cuối trước khi cắt cảnh, không khung chết ở điểm chuyển cảnh.
+- claims_verified: ["Người tìm việc Việt Nam gặp AI phỏng vấn — khớp bài Znews", "Nghiên cứu Booth School Đại học Chicago: AI phỏng vấn tỷ lệ nhận việc cao hơn, ~78% ứng viên chọn AI — verify qua WebSearch"]
+- copyright_notes: "ảnh nguồn Znews (minh hoạ chung, không phải ảnh người/sự kiện cụ thể); nhạc nền tự sinh qua Google Lyria RealTime (prompt instrumental, no vocals); SFX từ thư viện bundled media-use (offline, không qua HeyGen CLI)"
+- ai_disclosure_required: false
+- checked_at: 2026-10-07T00:52:04Z
+- reviewer: automated-routine
